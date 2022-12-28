@@ -23,4 +23,9 @@ function sf_child_theme_dequeue_style() {
  * Note: DO NOT! alter or remove the code above this text and only add your custom PHP functions below this text.
  */
 
+function capsutec_theme_scripts() {
+    // Tema principal css
+    wp_enqueue_style('main', get_stylesheet_directory_uri() . '/assets/css/style.min.css', array('bootstrap', 'google-font', 'swiper'), '1.0.0', 'all');
+}
 
+add_action('wp_enqueue_scripts', 'capsutec_theme_scripts');
