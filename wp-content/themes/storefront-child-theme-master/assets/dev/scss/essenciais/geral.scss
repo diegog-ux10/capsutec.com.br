@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Raleway', sans-serif;
+    font-family: $lato;
     font-size: 16px;
 }
 
@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6, p {
     margin: 0;
 }
 
@@ -27,20 +27,6 @@ abbr {
     text-decoration: none !important;
 }
 
-p, span {
-    margin: 0;
-    word-spacing: 1px;
-    letter-spacing: 0.5px;
-}
-
 a:focus, input:focus, textarea:focus {
     outline: none !important;
-}
-
-a {
-    color: #5A0A19;
-}
-
-a:hover {
-    color: #82B500;;
 }

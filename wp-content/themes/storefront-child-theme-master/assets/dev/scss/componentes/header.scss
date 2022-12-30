@@ -4,11 +4,25 @@
 #masthead {
     #top-header {
         justify-content: space-between;
-
-        .top-header_support, .top-header_language {
-            gap: $sm-gap;
+        background-color: $color-bg-light;
+        .top-header_support {
+            gap: $xsm-gap;
             display: flex;
             align-items: center;
+        }
+
+        .top-header_language {
+            gap: 4px;
+            display: flex;
+            align-items: center;
+            select {
+                border: 0px;
+                background-color: transparent;
+            }
+
+            path, select {
+                color: blue;
+            }
         }
     }
 }
