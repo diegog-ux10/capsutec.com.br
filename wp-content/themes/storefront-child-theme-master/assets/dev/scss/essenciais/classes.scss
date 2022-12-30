@@ -1,2 +1,33 @@
-// TEXT
-// ----
+/* Recipiente
+================================ */
+.full-width {
+    width: 100%;
+}
+
+.max-width {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* Orientação
+================================ */
+.center {
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-columns {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Padding
+================================ */
+
+.v-sm-padding {
+    padding-top: $sm-padding;
+    padding-bottom: $sm-padding;
+}
