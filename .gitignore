@@ -9,7 +9,8 @@ wp-content/*
 !wp-content/themes/
 
 # ignore these plugins
-wp-content/plugins/hello.php
+wp-content/plugins/show-current-template
+wp-content/plugins/woocommerce
 
 # ignore specific themes
 wp-content/themes/twenty*/
