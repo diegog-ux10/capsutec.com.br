@@ -9,6 +9,13 @@
     max-width: 1200px;
 }
 
+@media  screen and (max-width: 1200px) {
+    .max-width {
+        padding-left: $sm-padding;
+        padding-right: $sm-padding;
+    }
+}
+
 /* Orientação
 ================================ */
 .center {
@@ -30,4 +37,15 @@
 .v-sm-padding {
     padding-top: $sm-padding;
     padding-bottom: $sm-padding;
+}
+
+/* Texto
+================================ */
+
+.bold {
+    font-weight: 700;
+}
+
+.text-sm {
+    font-size: $m-text;
 }

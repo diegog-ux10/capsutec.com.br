@@ -1,27 +1,103 @@
-/* # Header, Main Menu
+/* # masthead, #top-header
 ================================ */
 
 #masthead {
-    #top-header {
-        justify-content: space-between;
+    .top-header_container {
         background-color: $color-bg-light;
-        .top-header_support {
-            gap: $xsm-gap;
-            display: flex;
-            align-items: center;
-        }
+        #top-header {
+            justify-content: space-between;
+            .top-header_support {
+                gap: $xsm-gap;
+                display: flex;
+                align-items: center;
+            }
+    
+            .top-header_language {
+                gap: 4px;
+                display: flex;
+                align-items: center;
+                select {
+                    border: 0px;
+                    background-color: transparent;
+                }
+    
+                path, select {
+                    color: $color-blue;
+                }
 
-        .top-header_language {
-            gap: 4px;
-            display: flex;
-            align-items: center;
-            select {
-                border: 0px;
-                background-color: transparent;
+                select {
+                    font-size: $m-text;
+                }
+            }
+        }
+    }    
+}
+
+.lower-header_container {
+    #lower-header {
+        justify-content: space-between;
+        align-items: center;
+        ul {
+            gap: 18px;
+            li{
+                z-index: 1;
+                position: relative;
+                a {
+                    color: $color-black;
+                    position: relative;
+                    transition: all 0.5s;
+                    z-index: 10;
+                    padding: 0 4px;
+                }
+
+                a:hover {
+                    color: $color-white;
+                }
+
+                a::before {
+                    content: "";
+                    position: absolute;
+                    height: 33.33%;
+                    width: 0;
+                    background-color: $color-blue;
+                    bottom: 66.66%;
+                    left: 0;
+                    z-index: -1;
+                    transition: all 0.5s;
+                }
+
+                a:hover::before {
+                    width: 100%;
+                }
+
             }
 
-            path, select {
-                color: blue;
+            li::before {
+                content: "";
+                position: absolute;
+                height: 33.33%;
+                width: 0;
+                background-color: $color-blue;
+                right: 0;
+                z-index: 0;
+                top: 33.33%;
+                transition: all 0.5s;
+            }
+
+            li::after {
+                content: "";
+                position: absolute;
+                height: 33.33%;
+                width: 0;
+                background-color: $color-blue;
+                left: 0;
+                z-index: 0;
+                bottom: 0;
+                transition: all 0.5s;
+            }
+
+            li:hover::before, li:hover::after {
+                width: 100%;
             }
         }
     }
