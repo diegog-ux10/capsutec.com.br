@@ -15,9 +15,9 @@ function capsutec_theme_scripts()
     //Bootstrap css
     wp_register_style(
         "bootstrap",
-        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css",
+        "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css",
         [],
-        "5.2.2",
+        "8.4.5",
         "all"
     );
 
@@ -44,7 +44,7 @@ function capsutec_theme_scripts()
         "swiper",
         "https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js",
         ["jquery"],
-        "8.4.4"
+        "8.4.5"
     );
 
     // Bootstrap js
@@ -72,18 +72,26 @@ function capsutec_theme_scripts()
     //     true
     // );
 
-    // Custom js
+    // Header Toggle Button
     wp_enqueue_script(
-        "custom",
-        get_stylesheet_directory_uri() . "/assets/js/custom.min.js",
+        "menu-toggle",
+        get_stylesheet_directory_uri() . "/assets/js/menuToggle.min.js",
         ["jquery"],
         "1.0.0"
     );
 
-    // Header js
+    // Hide Top Header Scroll
     wp_enqueue_script(
-        "header",
-        get_stylesheet_directory_uri() . "/assets/js/header.min.js",
+        "top-header-hide",
+        get_stylesheet_directory_uri() . "/assets/js/scrollHide.min.js",
+        ["jquery"],
+        "1.0.0"
+    );
+
+    // Home Slider
+    wp_enqueue_script(
+        "home-slider",
+        get_stylesheet_directory_uri() . "/assets/js/homeSlider.min.js",
         ["jquery"],
         "1.0.0"
     );
