@@ -64,13 +64,13 @@ function capsutec_theme_scripts()
         true
     );
 
-    wp_enqueue_script(
-        "js-forms",
-        get_stylesheet_directory_uri() . "/assets/js/forms.min.js",
-        ["jquery"],
-        wp_get_theme()->get("Version"),
-        true
-    );
+    // wp_enqueue_script(
+    //     "js-forms",
+    //     get_stylesheet_directory_uri() . "/assets/js/forms.min.js",
+    //     ["jquery"],
+    //     wp_get_theme()->get("Version"),
+    //     true
+    // );
 
     // Custom js
     wp_enqueue_script(

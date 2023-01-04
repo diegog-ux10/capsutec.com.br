@@ -37,68 +37,156 @@
     #lower-header {
         justify-content: space-between;
         align-items: center;
-        ul {
-            gap: 18px;
-            li{
-                z-index: 1;
-                position: relative;
-                a {
-                    color: $color-black;
+        nav#nav-menu {
+            transition: all 0.8s;
+            ul {
+                gap: 18px;
+                li{
+                    z-index: 1;
                     position: relative;
-                    transition: all 0.5s;
-                    z-index: 10;
-                    padding: 0 4px;
+                    a {
+                        color: $color-black;
+                        position: relative;
+                        transition: all 0.5s;
+                        z-index: 10;
+                        padding: 0 4px;
+                    }
+    
+                    a:hover {
+                        color: $color-white;
+                    }
+    
+                    a::before {
+                        content: "";
+                        position: absolute;
+                        height: 33.33%;
+                        width: 0;
+                        background-color: $color-blue;
+                        bottom: 66.66%;
+                        left: 0;
+                        z-index: -1;
+                        transition: all 0.5s;
+                    }
+    
+                    a:hover::before {
+                        width: 100%;
+                    }
+    
                 }
-
-                a:hover {
-                    color: $color-white;
-                }
-
-                a::before {
+    
+                li::before {
                     content: "";
                     position: absolute;
                     height: 33.33%;
                     width: 0;
                     background-color: $color-blue;
-                    bottom: 66.66%;
-                    left: 0;
-                    z-index: -1;
+                    right: 0;
+                    z-index: 0;
+                    top: 33.33%;
                     transition: all 0.5s;
                 }
-
-                a:hover::before {
+    
+                li::after {
+                    content: "";
+                    position: absolute;
+                    height: 33.33%;
+                    width: 0;
+                    background-color: $color-blue;
+                    left: 0;
+                    z-index: 0;
+                    bottom: 0;
+                    transition: all 0.5s;
+                }
+    
+                li:hover::before, li:hover::after {
                     width: 100%;
                 }
-
             }
-
-            li::before {
-                content: "";
-                position: absolute;
-                height: 33.33%;
-                width: 0;
-                background-color: $color-blue;
-                right: 0;
-                z-index: 0;
-                top: 33.33%;
-                transition: all 0.5s;
+    
+            #menu-toggle {
+                background-color: transparent;
+                padding: 4px;
+                border-radius: 4px;
             }
+        }           
+    }
+}
 
-            li::after {
-                content: "";
-                position: absolute;
-                height: 33.33%;
-                width: 0;
-                background-color: $color-blue;
-                left: 0;
-                z-index: 0;
-                bottom: 0;
-                transition: all 0.5s;
-            }
+/* Media Queries
+================================ */
 
-            li:hover::before, li:hover::after {
-                width: 100%;
+@media screen and (max-width: 1199px) {
+    #lower-header{
+        nav {
+            display: none;
+            position: absolute;
+            background-color: $color-black;
+            left: 0;
+            top: 0;
+            height: fit-content;
+            text-align: -webkit-right;
+            ul {
+                flex-direction: column;
+                gap: 0 !important;
+                li {
+                    height: 80px;
+                    width: 480px;
+                    background-color: $color-blue;
+                    a {
+                        width: 100% !important;
+                        height: 100% !important;
+                        display: inline-block;
+                        text-align: -webkit-center;
+                        line-height: 4;
+                        border: 1px solid $color-white;
+                        color: $color-white !important;
+                    }
+                }
             }
         }
+
+        #menu-toggle-close {
+            background-color: transparent;
+            border: none;
+            color: $color-white;
+            padding: 24px 24px 24px 0px;
+        }
     }
+}
+
+@media screen and (min-width: 1199px) {
+    #lower-header{
+        #menu-toggle, #menu-toggle-close {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 668px) {
+    #top-header {
+        flex-direction: column;
+        padding: $sm-padding;        
+        gap: 24px;
+        justify-content: flex-end;
+       .top-header_support {
+        padding: 0;
+       }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    #masthead {
+        position: fixed;
+    }
+}
+
+/* Toggle Clases
+================================ */
+
+.hide {
+    display: none;
+}
+
+.show-menu-nav {
+    display: block!important;
 }

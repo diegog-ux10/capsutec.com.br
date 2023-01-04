@@ -1,9 +1,11 @@
-$(window).scroll(function () {
-	var sc = $(window).scrollTop()
-	if (sc > 150) {
-		$("#main-navbar").addClass("navbar-scroll")
+jQuery(window).scroll(function($) {
+	const topHeader = document.querySelector("#top-header")
+	var sc = jQuery(window).scrollTop()
+
+	if (sc > 20) {
+		topHeader.classList.add('hide')
 	} 
 	else {
-		$("#main-navbar").removeClass("navbar-scroll")
+		topHeader.classList.remove('hide')
 	}
 });
