@@ -46,6 +46,22 @@
     font-weight: 700;
 }
 
+.text {
+    font-size: $sm-text;
+}
+
 .text-sm {
     font-size: $m-text;
+}
+
+.title-l {
+    font-size: $l-text;
+}
+
+.dark-blue {
+    color: $color-text-blue;
+}
+
+.blue {
+    color: $color-blue;
 }

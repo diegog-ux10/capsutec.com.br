@@ -5,15 +5,32 @@
                 <!-- Swiper -->
                 <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">Slide 1</div>
-                    <div class="swiper-slide">Slide 2</div>
-                    <div class="swiper-slide">Slide 3</div>
-                    <div class="swiper-slide">Slide 4</div>
-                    <div class="swiper-slide">Slide 5</div>
-                    <div class="swiper-slide">Slide 6</div>
-                    <div class="swiper-slide">Slide 7</div>
-                    <div class="swiper-slide">Slide 8</div>
-                    <div class="swiper-slide">Slide 9</div>
+                    <?php // Check rows existexists.
+                    if( have_rows('slider') ):
+
+                        // Loop through rows.
+                        while( have_rows('slider') ) : the_row(); 
+                        $imagen = get_sub_field('imagem_de_fundo');
+                        $link = get_sub_field('link');
+                        $button_text = get_sub_field('texto_no_botao');
+                        $text = get_sub_field('paragrafo_do_slide');
+                        $title = get_sub_field('mensagem_principal');
+                        ?>
+                        <div class="swiper-slide" style='background-image: url("<?= $imagen ?>");'>
+                            <div class="flex-columns swiper-slide_info-container">
+                                <h2 class="title-l dark-blue"><?= _($title) ?></h2>
+                                <p class="text blue"><?= _($text) ?></p>
+                                <a href="<?= $link ?>" class="btn-blue"><?= _($button_text) ?></a>
+                            </div>
+                        </div>
+
+                        <!-- End loop -->
+                       <?php endwhile;
+
+                    // No value.
+                    else :
+                        // Do something...
+                    endif; ?>
                 </div>
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
