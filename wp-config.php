@@ -1,4 +1,5 @@
 <?php
+define( 'WP_CACHE', true ); 
 /**
  * The base configuration for WordPress
  *
@@ -17,33 +18,23 @@
  *
  * @package WordPress
  */
-
 // ** Database settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'capsutec.com.br' );
-
 /** Database username */
 define( 'DB_USER', 'root' );
-
 /** Database password */
 define( 'DB_PASSWORD', '' );
-
 /** Database hostname */
 define( 'DB_HOST', 'localhost' );
-
 /** Database charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8' );
-
 /** The database collate type. Don't change this if in doubt. */
 define( 'DB_COLLATE', '' );
-
 if ( !defined('WP_CLI') ) {
     define( 'WP_SITEURL', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] );
     define( 'WP_HOME',    $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] );
 }
-
-
-
 /**#@+
  * Authentication unique keys and salts.
  *
@@ -63,9 +54,7 @@ define( 'AUTH_SALT',        'eGrjc01SJpfJrqvZI9e9eY2O5cnZDu2KQVLhojoV5ujhiYnxopE
 define( 'SECURE_AUTH_SALT', '803EeFyyUwHoab8DZ1iIq1o8xojzyxOhrboWqNBCxARaapQGQK4SfziKPiZLyGBk' );
 define( 'LOGGED_IN_SALT',   'IAD8VExCTJ4CiX0GNcF0BdCk0YfoTge78wFsfMSmU35EWtnUQgSnKZBwvSx5DgnN' );
 define( 'NONCE_SALT',       'JOGuN4tpysvArBeRrGfoHMwEVllL8Dkk0aBGdXFGk84y9ujG3P9479QTm40EEfaq' );
-
 /**#@-*/
-
 /**
  * WordPress database table prefix.
  *
@@ -73,7 +62,6 @@ define( 'NONCE_SALT',       'JOGuN4tpysvArBeRrGfoHMwEVllL8Dkk0aBGdXFGk84y9ujG3P9
  * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix = 'wp_';
-
 /**
  * For developers: WordPress debugging mode.
  *
@@ -87,17 +75,11 @@ $table_prefix = 'wp_';
  * @link https://wordpress.org/support/article/debugging-in-wordpress/
  */
 define( 'WP_DEBUG', false );
-
 /* Add any custom values between this line and the "stop editing" line. */
-
-
-
 /* That's all, stop editing! Happy publishing. */
-
 /** Absolute path to the WordPress directory. */
 if ( ! defined( 'ABSPATH' ) ) {
 	define( 'ABSPATH', __DIR__ . '/' );
 }
-
 /** Sets up WordPress vars and included files. */
 require_once ABSPATH . 'wp-settings.php';
