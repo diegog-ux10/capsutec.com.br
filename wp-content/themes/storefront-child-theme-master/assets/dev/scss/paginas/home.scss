@@ -38,5 +38,16 @@
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
     }
+}
 
+#about-home {
+    figure, article {
+        width: 50%;
+    }
+
+    article {
+        p {
+            margin-top: $sl-gap;
+        }
+    }
 }

@@ -39,6 +39,17 @@
     padding-bottom: $sm-padding;
 }
 
+.v-m-padding {
+    padding-top: $m-padding;
+    padding-bottom: $m-padding;
+}
+
+.l-m-padding {
+    padding-top: $l-padding;
+    padding-bottom: $l-padding;
+}
+
+
 /* Texto
 ================================ */
 
@@ -68,6 +79,18 @@
     line-height: 26px;
     letter-spacing: 1px;
     text-transform: uppercase;
+}
+
+.title-m {
+    font-size: $xm-text;
+    line-height: 30px;
+    font-weight: 800;
+}
+
+.title-xs {
+    font-size: $xsm-text;
+    line-height: 21px;
+    font-weight: 600;
 }
 
 .dark-blue {
