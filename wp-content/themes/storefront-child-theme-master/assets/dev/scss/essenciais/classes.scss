@@ -54,8 +54,20 @@
     font-size: $m-text;
 }
 
+.text-xsm {
+    font-size: $xsm-text;
+    line-height: 22px;
+}
+
 .title-l {
     font-size: $l-text;
+}
+
+.title-s {
+    font-size: $xsm-text;
+    line-height: 26px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 
 .dark-blue {
@@ -64,4 +76,8 @@
 
 .blue {
     color: $color-blue;
+}
+
+.white {
+    color: $color-white;
 }

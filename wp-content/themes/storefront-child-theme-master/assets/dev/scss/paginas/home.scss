@@ -1,13 +1,42 @@
 /* Home
 ================================ */
 
-.mision {
+#value-container {
     position: relative;
-    background-color: black;
-    max-width: 1200px;
-    margin: 0 auto;
-    border-radius: 50px;
-    height: 250px;
-    z-index: 100;
-    margin-top: -100px;
+    height: fit-content;
+    margin-top: -50px;
+    z-index: 1;
+
+    .column_value {
+        width: 33.33%;
+        justify-content: flex-start;
+        text-align: start;
+        padding: $m-padding $l-padding;
+        gap: $sl-gap;
+    }
+
+    .column_value:first-child {
+        background-color: #00578A;
+        -webkit-border-top-left-radius: 20px;
+        -webkit-border-bottom-left-radius: 20px;
+        -moz-border-radius-topleft: 20px;
+        -moz-border-radius-bottomleft: 20px;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .column_value:not(:first-child):not(:last-child) {
+        background-color: #0067A3;
+    }
+
+    .column_value:last-child {
+        background-color: #0077BD;
+        -webkit-border-top-right-radius: 20px;
+        -webkit-border-bottom-right-radius: 20px;
+        -moz-border-radius-topright: 20px;
+        -moz-border-radius-bottomright: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+
 }
