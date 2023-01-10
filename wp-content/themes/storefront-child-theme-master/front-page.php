@@ -87,8 +87,11 @@
         $products = new WP_Query($product_settings);
     
         ?>
-        <section id="carousel-home">
-            <?php if(have_posts($products)): ?>        
+        <section id="carousel-home" class="flex-columns l-m-padding">
+            <?php if(have_posts($products)): ?>
+            <div class="max-width center section-title">
+                <h2 class="title-xm white"><?php echo _('Vendas'); ?></h2> 
+            </div>                   
             <div class="carousel-container swiper swiper2">
                 <div class="slide-content">
                     <div class="card-wrapper swiper-wrapper swiper-wrapper2">
@@ -118,7 +121,7 @@
             <?php endif; ?>
         </section>
 
-        <section id="time" class="full-width v-m-padding ">
+        <section id="time" class="full-width v-m-padding gradient-background">
             <div class="max-width flex center">
                 <div class="title flex">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">

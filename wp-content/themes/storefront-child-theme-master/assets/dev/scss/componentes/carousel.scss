@@ -1,9 +1,14 @@
 #carousel-home {
-    min-height: 100vh;
+    height: fit-content;
     display: flex;
-    align-items: center;
     justify-content: center;
     background-color: $color-blue;
+    gap: $sl-gap;
+
+    .section-title {
+        padding-left: 40px;
+    }
+
     .carousel-container {
         max-width: 1260px;
         width: 100%;

@@ -1,0 +1,61 @@
+/* footer .site-footer
+================================ */
+
+footer.site-footer {
+    div.bottom-footer {
+        div.flex {
+            justify-content: space-between;
+        }
+    }
+
+    div.top-footer {
+        justify-content: space-between;
+
+        .footer-columns {
+            width: 75%;  /* Mozilla-based browsers will ignore this. */
+            gap: $sl-gap;
+            .footer-column {
+                gap: $sm-gap;
+                
+                address {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 9px;
+                }
+
+                .rrss-icons {
+                    justify-content: space-around;
+                    gap: $sm-gap;
+                    a {
+                        svg {
+                            path {
+                                color: $color-black;
+                                transition: all 0.5s ease;
+                            }
+
+                            path:hover {
+                                
+                            }
+                        }
+
+                        svg:hover {
+                            path {
+                                color: $color-blue;
+                                height: 25px;
+                                width: 25px;
+                            }
+                                
+                        }
+                    }
+                }
+            }
+        }
+
+        .custom-logo-link {
+            width: 25%;
+            img {
+                filter: grayscale(100);
+            }            
+        }
+    }
+}
