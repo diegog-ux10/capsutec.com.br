@@ -100,14 +100,12 @@
                                 <div class="card-image">
                                     <img src="<?php echo get_the_post_thumbnail_url() ?>" alt="<?php echo esc_attr(get_the_title()) ?>" class="card-img">
                                 </div>
-                                <div class="card-content flex-columns">
-                                <a rel="nofollow" href='<?php echo home_url() . "/cart/?add-to-cart=$id" ?>' data-quantity="1" data-product_id="<?php echo $id?>" data-product_sku="<?php $product->get_sku();?>" class="add_to_cart_button ajax_add_to_cart"><?php echo _('Adicionar à cotação')?></a>
-                                    <h2 class="name"><?php the_title() ?></h2>
-                                    <?php wsb_add_to_cart_button(); ?>
-                                </div>
-                                <p><?php echo $id ?></p>
-                                <div class="button"><?php echo _('Ver Produto') ?></div>
                             </div>
+                            <div class="card-content flex-columns">
+                                <a href="#"><?php echo _('Adicionar à cotação')?></a>
+                                <h2 class="title-m"><?php the_title() ?></h2>
+                            </div>
+                            <a href="<?php echo get_the_permalink(); ?>" class="btn-blue card-product-link"><?php echo _('Ver Produto') ?></a>
                         </div>
                         <?php endwhile; ?>
                     </div>            
@@ -119,7 +117,22 @@
             
             <?php endif; ?>
         </section>
-        
-        <?php echo do_shortcode( "[ajax_add_to_cart id='78' text='Buy']" ); ?>
+
+        <section id="time" class="full-width v-m-padding ">
+            <div class="max-width flex center">
+                <div class="title flex">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="currentColor" class="bi bi-clock-fill" viewBox="0 0 16 16">
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                    </svg>
+                    <h2 class="title-m white"><?php echo _('Horário de funcionamento') ?></h2>
+                </div>
+                <div class="flex">
+                    <ul class="flex-columns">
+                        <li class="title-m white"><?php echo _('Segunda à Quinta 7h45 às 12h00') ?></li>
+                        <li class="title-m white"><?php echo _('13h15 às 18h00 Sexta 7h45 às 17h00') ?></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
     </div><!--id= post name-->
 <?php get_footer(); ?>
