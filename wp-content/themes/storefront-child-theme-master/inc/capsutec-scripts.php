@@ -95,6 +95,14 @@ function capsutec_theme_scripts()
         ["jquery"],
         "1.0.0"
     );
+
+    // Home Carousel
+    wp_enqueue_script(
+        "home-carousel",
+        get_stylesheet_directory_uri() . "/assets/js/carousel.min.js",
+        ["jquery"],
+        "1.0.0"
+    );
 }
 
 add_action("wp_enqueue_scripts", "capsutec_theme_scripts");

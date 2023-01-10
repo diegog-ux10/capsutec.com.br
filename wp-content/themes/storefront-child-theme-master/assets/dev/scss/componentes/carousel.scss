@@ -1,0 +1,69 @@
+#carousel-home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $color-blue;
+    .carousel-container {
+        max-width: 1260px;
+        width: 100%;
+        padding: 0 60px;    
+        .slide-content {
+            overflow: hidden !important;
+            .card-wrapper {
+                .card {
+                    border-radius: 25px;
+                    height: 456px;
+                    background-color: $color-white;
+                    width: 25%;
+                    .image-content {
+                        .card-image {
+                            position: relative;
+                            height: 228px;
+                            width: 100%;
+                            
+                            .card-img {
+                                width: 100%;
+                                height: 100%;
+                                object-fit: cover;
+                                object-position: center;
+                                border-top-left-radius: 25px;
+                                border-top-right-radius: 25px;
+                            }
+                        }
+                    }
+    
+                    .card-content {
+                        align-items: center;
+                        padding: 18px;
+                        .name {
+    
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper-navBtn {
+            background-color: $color-white;
+            padding: 40px;
+            border-radius: 50%;
+            -webkit-box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+            box-shadow: 6px 7px 17px 0px rgba(0,0,0,0.75);
+            font-size: 16px;
+            height: 10px;
+            z-index: 10000;
+        }
+
+        .swiper-navBtn::after {
+            z-index: 10000;
+        }
+
+        .swiper-button-next {
+            -webkit-box-shadow: -6px 7px 17px 0px rgba(0,0,0,0.75);
+            -moz-box-shadow: -6px 7px 17px 0px rgba(0,0,0,0.75);
+            box-shadow: -6px 7px 17px 0px rgba(0,0,0,0.75);
+        } 
+    }
+}
