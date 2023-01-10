@@ -135,4 +135,8 @@
             </div>
         </section>
     </div><!--id= post name-->
+
+    <div id="google-maps" class="full-width">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3660.919330681457!2d-51.97549512530118!3d-23.427281056678762!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ecd7021243d65d%3A0x41f4abfaff04afa2!2sCapsutec%20Encapsuladoras%20e%20Equipamentos%20Farmac%C3%AAuticos!5e0!3m2!1ses!2sve!4v1673360689217!5m2!1ses!2sve" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 <?php get_footer(); ?>
