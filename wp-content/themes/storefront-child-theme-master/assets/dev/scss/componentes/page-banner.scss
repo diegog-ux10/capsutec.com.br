@@ -1,0 +1,13 @@
+#page-header-banner {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100px;
+    display: flex;
+    .max-width {
+        display: flex;
+        justify-items: center;
+        justify-content: center;
+        align-items: center;
+    }
+}

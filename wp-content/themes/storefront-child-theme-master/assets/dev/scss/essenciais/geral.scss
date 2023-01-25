@@ -32,3 +32,8 @@ abbr {
 a:focus, input:focus, textarea:focus {
     outline: none !important;
 }
+
+// Corregir
+div.storefront-breadcrumb {
+    display: none !important; 
+}

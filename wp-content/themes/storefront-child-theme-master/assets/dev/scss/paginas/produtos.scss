@@ -1,0 +1,71 @@
+#produtos {
+
+    background-color: $color-bg-gray;
+    .products-container {
+        gap:$sm-gap;
+        .ajax-filter {
+            width: 300px !important;
+            padding: $sm-padding $sl-gap;
+            background-color: $color-white;
+            height: fit-content;
+            border-radius: 14px;
+            margin-top: 68px;
+        }
+        .show-products {
+            width: -moz-available;          /* WebKit-based browsers will ignore this. */
+            width: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+            width: fill-available;
+            ul.products {
+                padding-bottom: $sl-gap;
+                padding-top: $sl-gap;
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: space-between;
+                row-gap: $sl-gap;
+                li.product {
+                    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                    background-color: $color-white;
+                    width: 300px;
+                    height: 530px;
+                    a {
+                        width: 100% !important;
+                        img {
+                            object-fit: cover;
+                            width: 100%;
+                            height: 400px;
+                        }
+
+                        h2 {
+                            color: $color-black;
+                            text-align: center;
+                            padding-top: $sm-padding;
+                            font-style: normal;
+                            font-weight: 600;
+                            font-size: 18px;
+                            line-height: 22px;
+                        }
+                    }
+
+                    .yith-ywraq-add-to-quote {
+                        padding-top: $sl-gap;
+                        text-align: center;
+                        .yith-ywraq-add-button {
+                            a.add-request-quote-button {
+                                padding: 12PX $m-padding;
+                                width: fit-content;
+                                height: 45px;
+                                background: #0178BD;
+                                box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+                                border-radius: 7px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .storefront-sorting {
+                text-align: right;
+            }
+        }
+    }
+}

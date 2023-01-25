@@ -1,0 +1,79 @@
+#single-product_container {
+    padding-bottom: $l-padding;
+    padding-top: $l-padding;
+    .product {
+        display: flex;
+
+        .woocommerce-product-gallery {
+            width: 50%;
+
+            .flex-control-nav {
+                display: flex;
+                gap: 8px;
+            } 
+        }
+
+        .summary {
+            width: fit-content;
+            display: grid;
+            height: auto;
+            grid-template-columns: 100px auto auto;
+            grid-template-rows: auto auto auto auto;
+            row-gap: 15px;
+            .product_title.entry-title {
+                grid-column: 1/4;
+            }
+
+            .woocommerce-product-details__short-description {
+                grid-column: 1/4;
+                
+                p {
+                    margin-bottom: 12px;
+                }
+                
+            }
+
+            .cart {
+                grid-column: 1/2;
+                .quantity {
+                    input {
+                        width: 50px;
+                        aspect-ratio: 1/1;
+                        font-size: 24px;
+                        padding-left: 10px;
+                    }
+                }
+            }
+
+            .yith-ywraq-add-to-quote {
+                grid-column: 2/4;
+                align-self: center;
+                .yith-ywraq-add-button {
+                    a.add-request-quote-button {
+                        padding: 12PX $m-padding;
+                        font-size: $m-text;
+                        text-align: center;
+                        cursor: pointer;
+                        outline: none;
+                        color: #fff;
+                        background-color: $color-blue;
+                        border: none;
+                        border-radius: 8px;
+                        width: fit-content;
+                        transition: all 0.8s;
+                    }
+                }
+                
+               
+            }
+
+            .product_meta {
+                grid-column: 1/4;
+            }
+        }
+    }
+}
+
+section.storefront-sticky-add-to-cart {
+    display: none !important;
+}
