@@ -1,0 +1,32 @@
+.solicitar-cotacao-83 {
+    background-color: $color-bg-gray !important;
+    margin: 0 !important;
+    #post-83 {
+        padding-bottom: $l-padding;
+        padding-top: $l-padding;
+        .entry-content {
+            .woocommerce.ywraq-wrapper {
+                .ywraq-form-table-wrapper {
+                    @media screen and (min-width: 1200px ) {
+                        display: flex;
+                        flex-direction: row;
+                        justify-content: space-between;
+                        width: 100%;
+                        background-color: $color-white;
+                        padding: $sl-gap $sl-gap $sl-gap 0;
+                    }
+
+                    .yith-ywraq-mail-form-wrapper {
+                        width: 50%;
+                        background-color: $color-blue;
+                        border-radius: 10px;
+                    }
+                }
+            }
+        }    
+    }
+}
+
+.entry-header {
+    display: none;
+}

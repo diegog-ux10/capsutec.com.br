@@ -53,6 +53,10 @@
 /* Texto
 ================================ */
 
+.center-text {
+    text-align: center;
+}
+
 .bold {
     font-weight: 700;
 }
@@ -109,6 +113,11 @@
 
 .white {
     color: $color-white;
+}
+
+.dark-black {
+    color: $color-dark-black;
+    font-weight: 600;
 }
 
 /* Gradient
